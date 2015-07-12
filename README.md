@@ -1,4 +1,4 @@
-## clinical:session-extended-api
+## clinical:extended-api
 
 API extensions for Meteor core objects.
 
