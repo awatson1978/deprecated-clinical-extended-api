@@ -13,34 +13,6 @@ meteor add clinical:extended-api
 
 ### API
 
-The Session object will support the following API with this package installed:  
-
-````js
-Session.set()
-Session.setDefault()
-Session.setAll()
-Session.get()
-Session.equals()
-Session.toggle()
-Session.clear()
-````
-
-````js
-Mongo.Collection.drop()
-````
-
-
-### Testing  
-
-View the TinyTests results by doing the following:  
-````js
-cd myapp/packages/extended-api
-meteor test-packages
-````
-
-
-### Examples  
-
 #### Session.toggle(key)  
 Function, Client
 Toggle a variable true/false in the session.
@@ -78,6 +50,14 @@ Drop the entire collection.
 var Foo = new Mongo.Collection(null);
 Foo.insert({text: "foo"});
 Foo.drop();
+````
+
+### Testing  
+
+View the TinyTests results by doing the following:  
+````js
+cd myapp/packages/extended-api
+meteor test-packages
 ````
 
 ### Licensing
