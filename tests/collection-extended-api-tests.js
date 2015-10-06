@@ -1,14 +1,17 @@
 
-if(Meteor.isServer){
-  Tinytest.add('collection - drop()', function (test) {
-    var Foo = new Mongo.Collection(null);
-    Foo.insert({text: "foo"});
+describe('clinical:extended-api', function () {
+  describe('Collection - drop()', function () {
+    it.server('clears collections on server', function () {
 
-    test.equal(Foo.find().count(), 1);
+      var Foo = new Mongo.Collection(null);
+      Foo.insert({text: "foo"});
 
-    Foo.drop();
-    test.equal(Foo.find().count(), 0);
+      expect(Foo.find().count()).to.be.equal(1);
 
-    Foo = null;
+      Foo.drop();
+      expect(Foo.find().count()).to.be.equal(0);
+
+      Foo = null;
+    });
   });
-}
+});
