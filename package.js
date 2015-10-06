@@ -2,7 +2,7 @@ Package.describe({
   summary: "Extended API for Session and Collection.",
 
   // update this value before you run 'meteor publish'
-  version: "1.0.1",
+  version: "1.0.2",
 
   // if this value isn't set, meteor will default to the directory name
   name: "clinical:extended-api",
@@ -45,6 +45,6 @@ Package.on_test(function (api) {
   api.use('clinical:extended-api');
   api.use('clinical:verification');
 
-  api.add_files('tests/session-extended-api-tests.js', 'client');
-  api.add_files('tests/collection-extended-api-tests.js');
+  api.addFiles('tests/session-extended-api-tests.js', 'client');
+  api.addFiles('tests/collection-extended-api-tests.js');
 });
