@@ -2,7 +2,7 @@ Package.describe({
   summary: "Extended API for Session and Collection.",
 
   // update this value before you run 'meteor publish'
-  version: "1.0.2",
+  version: "1.0.3",
 
   // if this value isn't set, meteor will default to the directory name
   name: "clinical:extended-api",
@@ -12,6 +12,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
+  api.versionsFrom('1.1.0.2');
+
   api.use('meteor-platform@1.1.6');
 
   // Session can work with or without reload, but if reload is present
